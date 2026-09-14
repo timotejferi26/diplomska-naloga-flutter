@@ -1,0 +1,41 @@
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/
+.zed/
+.run/
+*.iml
+
+# Flutter and Dart generated files
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/build/
+**/coverage/
+
+# Android and iOS local/generated files
+**/android/.gradle/
+**/android/local.properties
+**/android/app/.cxx/
+**/ios/Pods/
+**/ios/.symlinks/
+**/*.jks
+**/*.keystore
+**/key.properties
+
+# Local benchmark output; published thesis results stay tracked in results/
+runs/
+results/new-runs/
+
+# Python caches and local environments
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Documents and diagnostic logs do not belong in the public source repository
+*.docx
+*.log
+*.logcat
+test_results/
