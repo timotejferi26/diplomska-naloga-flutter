@@ -41,9 +41,9 @@ scripts/                  Zagon testov, meritve in obdelava podatkov
 
 ## Okolje in različice paketov
 
-Enotski testi in statična analiza javne strukture so bili preverjeni s **Flutterjem 3.41.2 in Dartom 3.11.0**. To je okolje preverjanja prenosa; samo po sebi ne določa okolja zgodovinskih meritev. Za aplikacijo in merilne preizkuse je vključen projekt Android. Za meritve uporabite fizično napravo z omogočenim razhroščevanjem USB.
+Enotski testi in statična analiza projekta so bili preverjeni s **Flutterjem 3.41.2 in Dartom 3.11.0**. To je okolje preverjanja projekta; samo po sebi ne določa okolja, v katerem so nastale objavljene meritve. Za aplikacijo in merilne preizkuse je vključen projekt Android. Za meritve uporabite fizično napravo z omogočenim razhroščevanjem USB.
 
-Projekt ohranja izvorni `pubspec.lock`, vključno s posrednimi odvisnostmi:
+Repozitorij vključuje `pubspec.lock` s točno določenimi neposrednimi in posrednimi odvisnostmi:
 
 | Knjižnica | Omejitev v `pubspec.yaml` | Različica v `pubspec.lock` |
 |---|---|---|
@@ -88,7 +88,7 @@ flutter test test/default/state_management_unit_test.dart
 flutter test test/advanced/state_management_unit_test.dart
 ```
 
-Oba sklopa, skupna regresijska testa in osem testov uporabniškega vmesnika lahko zaženete z `flutter test` ali s skripto `./scripts/verify.sh`. Uspešnih je vseh 82 testov: 72 testov knjižničnih implementacij, dva testa produkcijske validacije ter podatkovnega sloja in osem testov, ki preverijo prikaz urejenega uporabnika na kartici v vsaki kombinaciji knjižnice ter ravni implementacije. Test napredne implementacije Watch_It preveri tudi pravilno zamenjavo naročnine po ponovnem nalaganju podatkov. Merilna preizkusa obeh ravni sta bila po preureditvi projekta funkcionalno preverjena v profilnem načinu s scenarijem `light` na napravi Samsung SM-G985F z Androidom 13; ta diagnostična zagona ne nadomeščata objavljenih meritev.
+Oba sklopa, skupna regresijska testa in osem testov uporabniškega vmesnika lahko zaženete z `flutter test` ali s skripto `./scripts/verify.sh`. Uspešnih je vseh 82 testov: 72 testov knjižničnih implementacij, dva testa produkcijske validacije ter podatkovnega sloja in osem testov, ki preverijo prikaz urejenega uporabnika na kartici v vsaki kombinaciji knjižnice ter ravni implementacije. Test napredne implementacije Watch_It preveri tudi pravilno zamenjavo naročnine po ponovnem nalaganju podatkov. Merilna preizkusa obeh ravni sta bila funkcionalno preverjena v profilnem načinu s scenarijem `light` na napravi Samsung SM-G985F z Androidom 13; ta preveritvena zagona ne nadomeščata celotnega objavljenega nabora meritev.
 
 ## Merilni preizkusi
 
@@ -165,7 +165,3 @@ python scripts/generate_breakdown_chart.py \
 ```
 
 Za grafe privzete uporabe pri prvih dveh ukazih zamenjajte `advanced` z `default`. Primerjalni graf razčlenitve uporablja podatke obeh ravni. Različice Pythonovih paketov trenutno niso zaklenjene, zato enakih slik na ravni posameznih slikovnih pik ni mogoče zagotoviti.
-
-## Izvor gradiva
-
-Privzeta implementacija izvira iz posnetka `766b259`, napredna pa iz posnetka `bcf6da4` izvornega razvojnega repozitorija. To sta identifikatorja izvorne zgodovine, ki ni vključena v ta javni repozitorij. Ob prenosu so bile prilagojene poti uvozov, združeni skupni sloji in vključene poznejše dopolnitve testov ter obdelave podatkov. Po preureditvi map sta bila izvedena diagnostična zagona scenarija `light`, celoten nabor objavljenih meritev pa ni bil ponovno ustvarjen.

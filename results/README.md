@@ -7,16 +7,16 @@ Mapa vsebuje podatke, uporabljene v diplomskem delu:
 - `none`, `light`, `medium` in `heavy`: 0, 100, 1000 in 5000 začetnih
   uporabnikov.
 
-V vsaki mapi scenarija so:
+V mapah scenarijev so:
 
-| Datoteka | Vsebina |
-|---|---|
-| `run_1.csv`–`run_5.csv` | surove meritve petih profilnih ponovitev |
-| `aggregated.csv` | povprečje in vzorčni standardni odklon (`n - 1`) |
-| `comparison.md` | berljiv, iz podatkov izpeljan povzetek |
-| `breakdown.csv`/`.json` | izvoz ločenega zagona v načinu `debug` |
-| `breakdown_by_type.csv` | ponovne gradnje po tipu gradnika |
-| `breakdown_summary.csv` | razčlenitev na seznamsko stran in kartice |
+| Datoteka | Vsebina | Scenariji |
+|---|---|---|
+| `run_1.csv`–`run_5.csv` | surove meritve petih profilnih ponovitev | vsi |
+| `aggregated.csv` | povprečje in vzorčni standardni odklon (`n - 1`) | vsi |
+| `comparison.md` | berljiv, iz podatkov izpeljan povzetek | vsi |
+| `breakdown.csv`/`.json` | izvoz ločenega zagona v načinu `debug` | `light`, `heavy` |
+| `breakdown_by_type.csv` | ponovne gradnje po tipu gradnika | `light`, `heavy` |
+| `breakdown_summary.csv` | razčlenitev na seznamsko stran in kartice | `light`, `heavy` |
 
 Razčlenitev po tipih je vključena za scenarija `light` in `heavy`. Profilne
 meritve so bile za obe implementaciji izvedene z enakim determinističnim
